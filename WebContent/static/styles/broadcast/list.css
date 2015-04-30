@@ -1,0 +1,93 @@
+#main {
+	margin-left: 208px;
+	width: 1000px;
+	min-height: 800px;
+	border-left: 1px solid #ccc;
+}
+
+#main>.title {
+	font-weight: bold;
+	font-size: 16px;
+	padding: 30px 0 20px 30px;
+}
+
+#main .type_list {
+	height: 40px;
+	border-bottom: 1px solid #ccc;
+}
+
+#main ul {
+	
+}
+
+#main .type_list li {
+	float: left;
+	padding: 0 30px 20px 30px;
+}
+
+#main .type_list li.current {
+	border-bottom: 4px solid green;
+}
+
+#main .type_list li:hover {
+	border-bottom: 4px solid #ccc;
+}
+
+#main .mynav {
+	padding: 30px 0 0 30px;
+}
+
+#main .mynav li {
+	float: left;
+	height: 35px;
+	line-height: 35px;
+	margin-right: 10px;
+}
+
+#main .mynav .tips {
+	padding-left: 20px;
+	color: #bbb;
+}
+
+#main .mynav a {
+	color: #ccc;
+}
+
+#main>.tips {
+	color: #a0a0a0;
+	background-color: #efefef;
+	padding: 10px 20px;
+}
+
+#main .content {
+	padding: 40px 30px 0 30px;
+}
+
+#main .content .detail {
+	text-align: left;
+	overflow: hidden;
+	padding-left: 20px;
+}
+
+#main .content .detail img {
+	height: 60px;
+	width: 60px;
+}
+
+#main .content .detail audio {
+	max-height: 60px;
+	max-width: 250px;
+}
+
+#main .content .detail video {
+	height: 60px;
+	width: 60px;
+}
+
+#main .content .detail .title {
+	overflow: hidden;
+	width: 300px;
+	height: 25px;
+	display: inline-block;
+	margin-left:10px;
+}

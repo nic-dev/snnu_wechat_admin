@@ -1,0 +1,207 @@
+#main {
+	/*margin-left: 208px;*/
+	float:left;
+	width: 1000px;
+	min-height: 800px;
+	border-left: 1px solid #ccc;
+}
+#main > .title {
+	font-weight:bold;
+	font-size: 16px;
+	padding: 30px 0 20px 30px;
+}
+#main .type_list {
+
+	height: 40px;
+	border-bottom: 1px solid #ccc;
+}
+#main ul {
+
+}
+#main .type_list li {
+	float: left;
+	padding: 0 30px 20px 30px;
+	cursor: pointer;
+}
+#main .type_list li.current {
+	border-bottom: 4px solid green;
+}
+#main .type_list li:hover {
+	border-bottom: 4px solid #ccc;
+}
+#main .type_list li.current:hover {
+	border-bottom: 4px solid green;
+}
+#main .mynav {
+	padding: 30px 0 0 30px;
+}
+#main .mynav li {
+	float: left;
+	margin-right: 10px;
+}
+
+#main .mynav a {
+	color: #ccc;
+}
+#main .content {
+	padding: 40px 30px 0 30px;
+}
+#main .content li.li_col{
+	float:left;
+	width:290px;
+	margin-left:20px;
+	
+}
+#main .content li.li_col > div{
+	width:100%;
+	margin-bottom:20px;
+	border:1px solid #ddd;
+}
+#main .content li.li_col > div.pull{
+	height:100px;
+	line-height:100px;
+	border:dotted  #ccc;
+	
+	text-align:center;
+	/*color: #ccc;
+	cursor: pointer;*/
+}
+#main .content li.li_col > div.pull  .hover{
+	height:100%;
+}
+#main .content li.li_col > div.pull  .hover div{
+	float:left;
+	
+	width:50%;
+	height:100%;
+	text-align: center;
+	display: table;
+}
+#main .content li.li_col > div.pull .hover  a{
+	vertical-align:middle;  
+    display:table-cell;
+	vertical-align: middle;
+	color: #ccc;
+}
+
+#main .content li.li_col > div.pull  i{
+	display: inline-block;
+	width:40px;
+	height:40px;
+}
+#main .content li.li_col > div.pull  i.add_single{
+		background: url("../../images/media_list.png") no-repeat scroll 0 0 ;
+	
+}
+#main .content li.li_col > div.pull  a:hover i.add_single{
+		background: url("../../images/media_list.png") no-repeat scroll 0 -48px ;
+	
+}
+#main .content li.li_col > div.pull  i.add_multi{
+		background: url("../../images/media_list.png") no-repeat scroll 0 -96px ;
+	
+}
+#main .content li.li_col > div.pull a:hover i.add_multi{
+		background: url("../../images/media_list.png") no-repeat scroll 0 -144px ;
+	
+}
+#main .content li.li_col > div.pull span{
+	display: block;
+	font-size: 12px;
+	
+}
+#main .content li.li_col > div.pull a:hover{
+	color: #000;
+}
+#main .content li.li_col > div.pull a.normal{
+	color:#ccc;
+	line-height:100px;
+	text-align:center;
+	font-size: 36px;
+	font-weight:bold;
+}
+#main .content .message {
+
+	line-height: 20px;
+}
+#main .content .message .detail {
+	padding: 10px;
+	line-height: 20px;
+}
+#main .content .message .detail .title{
+	cursor:pointer;
+}
+#main .content .message .detail .cover {
+	width: 270px;
+	height: 150px;
+	overflow: hidden;
+	cursor: pointer;
+}
+#main .content .message .detail .cover img {
+	width: 270px;
+	max-height:150px;
+}
+#main .content .message .sub{
+	
+	width:100%;
+	height:100px;
+	border-top:solid 1px #DDD;
+}
+#main .content .message .sub .title{
+	float:left;
+	width:180px;
+	height:80px;
+	line-height:20px;
+	word-wrap: break-word;
+	word-break:break-all;
+	overflow: hidden;
+	margin:20px 0 0 10px;
+	cursor: pointer;
+}
+#main .content .message .sub .cover{
+	float:right;
+	width:78px;
+	height:78px;
+	background-color: #aaa;
+	margin:10px 10px 0 0;
+	cursor: pointer;
+}
+#main .content .message .sub .cover img{
+	height:100%;
+	width:100%;
+}
+#main .content .message .opt {
+	width: 100%;
+	background-color: #F4F4F4;
+	line-height: 30px;
+	height: 30px;
+	
+}
+#main .content .message .opt span {
+	width: 50%;
+	float:left;
+	text-align: center;
+}
+#main .content .message .opt i {
+	margin-top:5px;
+	display:inline-block;
+	width:20px;
+	height: 20px;
+	cursor: pointer;
+}
+#main .content .message .opt .edit {
+	
+	background: url("../../images/base.png") 0 -6042px no-repeat;
+}
+#main .content .message .opt .del {
+	
+	background: url("../../images/base.png") 0 -5230px no-repeat
+}
+#main .content .message .opt .edit:hover {
+	
+	background: url("../../images/base.png") 0 -6070px no-repeat;
+}
+#main .content .message .opt .del:hover {
+	
+	background: url("../../images/base.png") 0 -5258px no-repeat
+}

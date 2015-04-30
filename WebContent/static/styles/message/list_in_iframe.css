@@ -1,0 +1,199 @@
+#iframe_container{
+	background-color: #fff;
+	min-width: 640px;
+}
+#main {
+	
+	width: 100%;
+	min-height: 200px;
+	border-left: 1px solid #ccc;
+}
+
+#main .content {
+	padding: 40px 10px 0 0px;
+}
+#main .content li.li_col{
+	float:left;
+	width:290px;
+	margin-left:20px;
+	
+}
+#main .content li.li_col > div{
+	width:100%;
+	margin-bottom:20px;
+	border:1px solid #ddd;
+	cursor: pointer;
+	position: relative;
+}
+#main .content li.li_col > div.add{
+	height:100px;
+	border:dotted;
+	
+	text-align:center;
+	color: #ccc;
+	cursor: pointer;
+}
+#main .content li.li_col > div.add  .hover{
+	height:100%;
+}
+#main .content li.li_col > div.add  .hover div{
+	float:left;
+	
+	width:50%;
+	height:100%;
+	text-align: center;
+	display: table;
+}
+#main .content li.li_col > div.add .hover  a{
+	vertical-align:middle;  
+    display:table-cell;
+	vertical-align: middle;
+	color: #ccc;
+}
+
+#main .content li.li_col > div.add  i{
+	display: inline-block;
+	width:40px;
+	height:40px;
+}
+#main .content li.li_col > div.add  i.add_single{
+		background: url("../../images/media_list.png") no-repeat scroll 0 0 ;
+	
+}
+#main .content li.li_col > div.add  a:hover i.add_single{
+		background: url("../../images/media_list.png") no-repeat scroll 0 -48px ;
+	
+}
+#main .content li.li_col > div.add  i.add_multi{
+		background: url("../../images/media_list.png") no-repeat scroll 0 -96px ;
+	
+}
+#main .content li.li_col > div.add a:hover i.add_multi{
+		background: url("../../images/media_list.png") no-repeat scroll 0 -144px ;
+	
+}
+#main .content li.li_col > div.add span{
+	display: block;
+	font-size: 12px;
+	
+}
+#main .content li.li_col > div.add a:hover{
+	color: #000;
+}
+#main .content li.li_col > div.add a.normal{
+	color:#ccc;
+	line-height:100px;
+	text-align:center;
+	font-size: 36px;
+	font-weight:bold;
+}
+#main .content .message {
+
+	line-height: 20px;
+}
+#main .content .message:hover{
+	background-color: #aaa;
+	opacity:0.4;
+	filter:alpha(opacity=40); 
+}
+#main .content .message .detail {
+	padding: 10px;
+	line-height: 20px;
+}
+#main .content .message .detail .cover {
+	width: 270px;
+	height: 150px;
+	overflow: hidden;
+}
+#main .content .message .detail .cover img {
+	width: 270px;
+	max-height:150px;
+}
+#main .content .message .detail .cover > span{
+	display: block;
+	line-height: 150px;
+	text-align: center;
+	background-color: #eee;
+}
+#main .content .message .sub{
+	
+	width:100%;
+	height:100px;
+	border-top:solid 1px #DDD;
+}
+#main .content .message .sub .title{
+	float:left;
+	width:180px;
+	height:80px;
+	line-height:20px;
+	word-wrap: break-word;
+	word-break:break-all;
+	overflow: hidden;
+	margin:20px 0 0 10px;
+}
+#main .content .message .sub .cover{
+	float:right;
+	width:78px;
+	height:78px;
+	background-color: #aaa;
+	margin:10px 10px 0 0;
+}
+#main .content .message .sub .cover img{
+	height:100%;
+	width:100%;
+}
+#main .content .message .opt {
+	width: 100%;
+	background-color: #F4F4F4;
+	line-height: 30px;
+	height: 30px;
+	
+}
+#main .content .message .opt span {
+	width: 50%;
+	float:left;
+	text-align: center;
+}
+#main .content .message .opt i {
+	margin-top:5px;
+	display:inline-block;
+	width:20px;
+	height: 20px;
+	cursor: pointer;
+}
+#main .content .message .opt .edit {
+	
+	background: url("../../images/base.png") 0 -6042px no-repeat;
+}
+#main .content .message .opt .del {
+	
+	background: url("../../images/base.png") 0 -5230px no-repeat
+}
+#main .content .message .opt .edit:hover {
+	
+	background: url("../../images/base.png") 0 -6070px no-repeat;
+}
+#main .content .message .opt .del:hover {
+	
+	background: url("../../images/base.png") 0 -5258px no-repeat;
+}
+#main .content .message .selected{
+	position: absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height: 100%;
+	
+	background-color:#aaa;
+	opacity:0.4;
+	filter:alpha(opacity=40); 
+	text-align: center;
+	
+}
+#main .content .message .selected .ok{
+	background: url("../../images/base.png") 0 -3645px no-repeat;
+	width:50px;
+	height:50px;
+	margin:80px auto;
+	
+}

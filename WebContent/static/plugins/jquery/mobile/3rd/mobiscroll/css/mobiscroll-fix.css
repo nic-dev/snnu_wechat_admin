@@ -1,0 +1,12 @@
+.ios .dwc{
+	width:90%;
+}
+.ios .dwc table{
+	width:100%;
+}
+.ios .dwc table .dw-i{
+	text-align: center;
+}
+.ios .dw .dwbc{
+	height:40px !important;/*修正去掉引用jquery mobile css后 出现间隙的问题*/
+}

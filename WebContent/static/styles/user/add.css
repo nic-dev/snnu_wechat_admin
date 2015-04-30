@@ -1,0 +1,56 @@
+
+#main {
+	margin-left: 208px;
+	width: 1000px;
+	min-height: 800px;
+	border-left: 1px solid #ccc;
+}
+#main > .title {
+	font-weight:bold;
+	font-size: 16px;
+	padding: 30px 0 20px 30px;
+}
+#main .type_list {
+
+	height: 40px;
+	border-bottom: 1px solid #ccc;
+}
+#main ul {
+
+}
+#main .type_list li {
+	float: left;
+	padding: 0 30px 20px 30px;
+	cursor: pointer;;
+}
+#main .type_list li.current {
+	border-bottom: 4px solid green;
+}
+#main .type_list li:hover {
+	border-bottom: 4px solid #ccc;
+}
+#main .type_list li.current:hover {
+	border-bottom: 4px solid green;
+}
+#main .mynav {
+	padding: 30px 0 0 30px;
+}
+#main .mynav li {
+	float: left;
+	height: 35px;
+	line-height: 35px;
+	margin-right: 10px;
+}
+#main .mynav .tips{
+	padding-left:20px;
+	color:#bbb;
+}
+#main .mynav a {
+	color: #ccc;
+}
+#main .content {
+	padding: 40px 30px 0 30px;
+}
+#main .content .form_area{
+	width:600px;
+}

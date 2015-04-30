@@ -1,0 +1,124 @@
+
+#main {
+	margin-left: 208px;
+	width: 1000px;
+	min-height: 800px;
+	border-left: 1px solid #ccc;
+}
+#main > .title {
+	font-weight:bold;
+	font-size: 16px;
+	padding: 30px 0 20px 30px;
+}
+#main .type_list {
+
+	height: 40px;
+	border-bottom: 1px solid #ccc;
+}
+#main ul {
+
+}
+#main .type_list li {
+	float: left;
+	padding: 0 30px 20px 30px;
+	cursor: pointer;
+}
+#main .type_list li.current {
+	border-bottom: 4px solid green;
+}
+#main .type_list li:hover {
+	border-bottom: 4px solid #ccc;
+}
+#main .type_list li.current:hover {
+	border-bottom: 4px solid green;
+}
+#main .mynav {
+	padding: 30px 0 0 30px;
+}
+#main .mynav li {
+	float: left;
+	margin-right: 10px;
+}
+
+#main .mynav a {
+	color: #ccc;
+}
+#main .content {
+	padding: 40px 30px 0 30px;
+}
+#main .cont_left {
+	float: left;
+	width: 340px;
+	height: 210px;
+	border: solid 1px #ccc;
+	padding: 10px;
+	
+}
+#main .cont_left .title{
+	width:300px;
+	margin:auto;
+	color:##8d8d8d;
+	font-size: 14px;
+	font-weight: bold;
+	overflow: hidden;
+}
+#main .cont_left .cover{
+	width:300px;
+	height:160px;
+	line-height:160px;
+	margin:auto;
+	text-align:center;
+	background-color:#eee;
+	color:#bbb;
+	font-size:16px;
+}
+#main .cont_left .cover img{
+	width:300px;
+	height:160px;
+}
+#main .cont_right{
+	margin-left:390px;
+	width:550px;
+	min-height:500px;
+	background-color:#eee;
+	border:solid 1px #ccc;
+	padding:0 0 20px 20px;
+	
+}
+#main .cont_right fieldset{
+	border:none 0;
+	padding-top:20px;
+}
+#main .cont_right .tips{
+	color:#aaa;
+}
+#main .cont_right .more{
+	color:#0000FF;
+	cursor: pointer;
+}
+#main .cont_right label{
+	display: block;
+	padding:0 0 5px 0;
+}
+#main .cont_right input{
+	
+}
+#main .cont_right input[type="text"]{
+	width: 500px;
+	height:25px;
+}
+#main .cont_right textarea{
+	width:500px;
+	height:100px;
+}
+#main .cont_right .preview{
+	margin-top:20px;
+}
+#main .btnRow{
+	padding: 20px;
+	text-align: center;
+}
+#main .btnRow button{
+	margin-right:20px;
+}
+

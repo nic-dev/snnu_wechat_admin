@@ -1,0 +1,73 @@
+#iframe_container{
+	background-color: #fff;
+	width:620px;
+}
+#main {
+	
+	width: 100%;
+	min-height: 200px;
+	border-left: 1px solid #ccc;
+}
+#main .content {
+	padding: 0px 30px 0 30px;
+}
+
+
+#main .content li{
+	float:left;
+	width:100%;
+/*	height:229px;*/
+	border:1px solid #ccc;
+	padding:5px 10px;
+
+}
+#main .content li input[type='radio']{
+	float:left;
+	
+	width:20px;
+}
+#main .content li .media_title{
+	float:left;
+	margin:0 5px 0;
+	width:200px;
+	text-align: left;
+	word-wrap:break-word;
+}
+#main .content li .size{
+	float:left;
+	margin:0 5px 5px;
+	
+	width:150px;
+	text-align:center;
+}
+#main .content li .date{
+	float:right;
+	margin:0 5px 5px;
+	
+	width:100px;
+	text-align:center;
+	
+}
+#main .content li img{
+	float:left;
+	margin:5px ;
+	max-width:120px;
+	height:70px;
+	clear: both;
+}
+#main .content li audio{
+	float:left;
+	margin:5px ;
+	width:148px;
+	height:30px;
+	clear: both;
+}
+#main .content li video{
+	float:left;
+	margin:5px ;
+	width:148px;
+	height:148px;
+	clear: both;
+}
+
+

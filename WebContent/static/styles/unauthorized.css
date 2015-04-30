@@ -1,0 +1,19 @@
+#container {
+	margin: 20px auto;
+	border: 1px solid #CCCCCC; width: 1210px;
+	height: 500px;
+	background-color: #FFF;
+}
+
+#container .content {
+	text-align: center;
+	color: #A0A0A0;
+	font-size: 22px;
+}
+
+#container .content .image {
+	margin:0 auto 20px;
+	width:150px;
+	height:120px;
+	background: url('../images/page_error.png') 0 0 no-repeat;
+}

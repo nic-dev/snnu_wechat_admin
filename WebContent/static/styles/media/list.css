@@ -1,0 +1,127 @@
+
+#main {
+	margin-left: 208px;
+	width: 1000px;
+	min-height: 800px;
+	border-left: 1px solid #ccc;
+}
+#main > .title {
+	font-weight:bold;
+	font-size: 16px;
+	padding: 30px 0 20px 30px;
+}
+#main .type_list {
+
+	height: 40px;
+	border-bottom: 1px solid #ccc;
+}
+#main ul {
+
+}
+#main .type_list li {
+	float: left;
+	padding: 0 30px 20px 30px;
+	cursor: pointer;;
+}
+#main .type_list li.current {
+	border-bottom: 4px solid green;
+}
+#main .type_list li:hover {
+	border-bottom: 4px solid #ccc;
+}
+#main .type_list li.current:hover {
+	border-bottom: 4px solid green;
+}
+#main .mynav {
+	padding: 30px 0 0 30px;
+}
+#main .mynav li {
+	float: left;
+	height: 35px;
+	line-height: 35px;
+	margin-right: 10px;
+}
+#main .mynav .tips{
+	padding-left:20px;
+	color:#bbb;
+}
+#main .mynav a {
+	color: #ccc;
+}
+#main .content {
+	padding: 40px 30px 0 30px;
+}
+#main .content li{
+	float:left;
+	width:160px;
+/*	height:229px;*/
+	border:1px solid #ccc;
+	margin:0 20px 20px 0;
+	
+
+}
+#main .content li img{
+	margin:5px ;
+	width:148px;
+	height:148px;
+}
+#main .content li audio{
+	margin:5px ;
+	width:148px;
+	height:30px;
+}
+#main .content li video{
+	margin:5px ;
+	width:148px;
+	height:148px;
+}
+#main .content li .media_title{
+	margin:0 5px 0;
+	word-wrap:break-word;
+}
+#main .content li .size{
+	margin:0 5px 5px;
+	color:red;
+}
+#main .content li .opt{
+	background-color: #f4f5f9;
+	
+	width:100%;
+}
+#main .content li .opt span{
+	float:left;
+	width:33.3%;
+	height:25px;
+	line-height:25px;
+	text-align: center;
+	cursor:pointer;
+}
+#main .content li .opt i{
+	display: inline-block;
+	width:18px;
+	height:18px;
+	margin-top:5px;
+	overflow: hidden;
+	
+}
+#main .content li .opt i.download{
+	background: url("../../images/base.png") no-repeat scroll 0 -5622px;
+	
+}
+#main .content li .opt i.download:hover{
+	background: url("../../images/base.png") 0 -5650px no-repeat;
+}
+#main .content li .opt i.edit{
+	background: url("../../images/base.png") 0 -6042px no-repeat;
+	
+}
+#main .content li .opt i.edit:hover{
+	background: url("../../images/base.png") 0 -6070px no-repeat;
+}
+#main .content li .opt i.del{
+	background: url("../../images/base.png") 0 -5230px no-repeat;
+	
+}
+#main .content li .opt i.del:hover{
+	background: url("../../images/base.png") 0 -5258px no-repeat;
+}

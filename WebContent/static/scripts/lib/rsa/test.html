@@ -1,0 +1,28 @@
+<html>
+<head>
+
+
+    	<script src="RSA.js" type="text/javascript"></script>
+
+            <script src="BigInt.js" type="text/javascript"></script>
+            <script src="Barrett.js" type="text/javascript"></script>
+		
+</head>
+<body>
+<script>
+
+	
+	
+var key ;
+function bodyRSA(){
+	setMaxDigits(130);
+  	key = new RSAKeyPair("10001","","0095df2450496d7c9705a8625bad6ea0594c3b4cba443b21122071355efa1a1bdb66e11d5736d6e65cadee26a6f67b556e1368561e69971f29cc895cd4489508ebb195e333e5ee2609710af1775dcdda377e39a54e24cb776d59e367b182c50a1301163a896b28a2a5519e63cf1aa7c3f83f594aa639232d0cea3b85de2e0cbdef"); 
+}
+bodyRSA();
+alert('hh');
+
+	var result = encryptedString(key, "123456");
+	alert(result);
+</script>
+</body>
+</html>

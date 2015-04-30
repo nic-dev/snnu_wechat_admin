@@ -1,0 +1,38 @@
+#container{
+	width:100%;
+	margin-top:5px;
+	min-height:140px;
+}
+#title{
+	padding:5px 10px 5px 10px;
+	line-height:32px;
+	text-align: center;
+	font-size:25px;
+	font-weight: bold;
+}
+#info{
+	width:100%;
+	padding:0 10px 5px 10px;
+	border-bottom: 1px solid green;
+	font-size:12px;
+	color:#999;
+}
+#info span{
+	margin-right:10px;
+}
+#image{
+	padding: 10px 10px 5px;
+}
+#image img{
+	width: 100%;
+	height: auto;
+}
+#content {
+	margin:20px 10px 10px;
+	font-size:14px;
+	line-height:25px;
+}
+#content img{
+	max-width: 100%;
+	height:auto;
+}

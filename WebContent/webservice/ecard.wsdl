@@ -1,0 +1,1375 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions name="IPersonBusinessService" targetNamespace="http://service.server.webservice.smartcity.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://service.server.webservice.smartcity.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://service.server.webservice.smartcity.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://service.server.webservice.smartcity.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xs:complexType name="transWrapper">
+<xs:sequence>
+<xs:element maxOccurs="unbounded" minOccurs="0" name="deal" nillable="true" type="tns:deal" />
+<xs:element minOccurs="0" name="resultCode" type="xs:string" />
+<xs:element minOccurs="0" name="resultMessage" type="xs:string" />
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="deal">
+<xs:complexContent>
+<xs:extension base="tns:basePOJO">
+<xs:sequence>
+<xs:element minOccurs="0" name="deptCode" type="xs:string" />
+<xs:element minOccurs="0" name="deptName" type="xs:string" />
+<xs:element minOccurs="0" name="machineId" type="xs:string" />
+<xs:element minOccurs="0" name="smtAuthNo" type="xs:long" />
+<xs:element minOccurs="0" name="smtCardId" type="xs:long" />
+<xs:element minOccurs="0" name="smtDealCode" type="xs:string" />
+<xs:element minOccurs="0" name="smtDealDateTime" type="xs:dateTime" />
+<xs:element minOccurs="0" name="smtDealDateTimeTxt" type="xs:string" />
+<xs:element minOccurs="0" name="smtDealName" type="xs:string" />
+<xs:element minOccurs="0" name="smtInMoney" type="xs:double" />
+<xs:element minOccurs="0" name="smtItemCode" type="xs:string" />
+<xs:element minOccurs="0" name="smtItemName" type="xs:string" />
+<xs:element minOccurs="0" name="smtName" type="xs:string" />
+<xs:element minOccurs="0" name="smtOperatorId" type="xs:string" />
+<xs:element minOccurs="0" name="smtOperatorName" type="xs:string" />
+<xs:element minOccurs="0" name="smtOrgId" type="xs:string" />
+<xs:element minOccurs="0" name="smtOrgName" type="xs:string" />
+<xs:element minOccurs="0" name="smtOutMoney" type="xs:double" />
+<xs:element minOccurs="0" name="smtRowId" type="xs:long" />
+<xs:element minOccurs="0" name="smtSalaryno" type="xs:string" />
+<xs:element minOccurs="0" name="smtShowCardNo" type="xs:string" />
+<xs:element minOccurs="0" name="smtTimes" type="xs:long" />
+<xs:element minOccurs="0" name="smtTransMoney" type="xs:double" />
+<xs:element minOccurs="0" name="smtWalletCode" type="xs:string" />
+<xs:element minOccurs="0" name="smtWalletName" type="xs:string" />
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+<xs:complexType name="basePOJO">
+<xs:sequence>
+<xs:element minOccurs="0" name="createDate" type="xs:dateTime" />
+<xs:element minOccurs="0" name="createPerson" type="xs:string" />
+<xs:element minOccurs="0" name="id" type="xs:string" />
+<xs:element minOccurs="0" name="updateDate" type="xs:dateTime" />
+<xs:element minOccurs="0" name="updatePerson" type="xs:string" />
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="cardMoneyWrapper">
+<xs:sequence>
+<xs:element maxOccurs="unbounded" minOccurs="0" name="cardMoney" nillable="true" type="tns:smartCardmoney" />
+<xs:element minOccurs="0" name="resultCode" type="xs:string" />
+<xs:element minOccurs="0" name="resultMessage" type="xs:string" />
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="smartCardmoney">
+<xs:sequence>
+<xs:element minOccurs="0" name="id" type="tns:smartCardmoneyId" />
+<xs:element minOccurs="0" name="smtAccountno" type="xs:int" />
+<xs:element minOccurs="0" name="smtAdddealdatetime" type="xs:dateTime" />
+<xs:element minOccurs="0" name="smtAddtimes" type="xs:long" />
+<xs:element minOccurs="0" name="smtArithmetic" type="xs:byte" />
+<xs:element minOccurs="0" name="smtBegindate" type="xs:dateTime" />
+<xs:element minOccurs="0" name="smtDailycode" type="xs:string" />
+<xs:element minOccurs="0" name="smtDailyno" type="xs:long" />
+<xs:element minOccurs="0" name="smtDealdatetime" type="xs:dateTime" />
+<xs:element minOccurs="0" name="smtEndcode" type="xs:string" />
+<xs:element minOccurs="0" name="smtEnddatetime" type="xs:dateTime" />
+<xs:element minOccurs="0" name="smtEndmoney" type="xs:double" />
+<xs:element minOccurs="0" name="smtEndtimes" type="xs:long" />
+<xs:element minOccurs="0" name="smtFirstmoney" type="xs:double" />
+<xs:element minOccurs="0" name="smtLastmoney" type="xs:double" />
+<xs:element minOccurs="0" name="smtMinusmoneysum" type="xs:double" />
+<xs:element minOccurs="0" name="smtOperatorid" type="xs:string" />
+<xs:element minOccurs="0" name="smtOrgId" type="xs:string" />
+<xs:element minOccurs="0" name="smtOutdealcode" type="xs:string" />
+<xs:element minOccurs="0" name="smtOutlastdealdatetime" type="xs:dateTime" />
+<xs:element minOccurs="0" name="smtOutlastmoney" type="xs:double" />
+<xs:element minOccurs="0" name="smtOutlasttimes" type="xs:long" />
+<xs:element minOccurs="0" name="smtPlusmoneysum" type="xs:double" />
+<xs:element minOccurs="0" name="smtSector" type="xs:byte" />
+<xs:element minOccurs="0" name="smtSubjectinternalid" type="xs:short" />
+<xs:element minOccurs="0" name="smtTimes" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="smartCardmoneyId">
+<xs:sequence>
+<xs:element minOccurs="0" name="smtCardid" type="xs:long" />
+<xs:element minOccurs="0" name="smtWalletcode" type="xs:string" />
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="cardWrapper">
+<xs:sequence>
+<xs:element maxOccurs="unbounded" minOccurs="0" name="card" nillable="true" type="tns:card" />
+<xs:element minOccurs="0" name="resultCode" type="xs:string" />
+<xs:element minOccurs="0" name="resultMessage" type="xs:string" />
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="card">
+<xs:complexContent>
+<xs:extension base="tns:smartCard">
+<xs:sequence>
+<xs:element name="balance" type="xs:double" />
+<xs:element minOccurs="0" name="smtCarddateTxt" type="xs:string" />
+<xs:element minOccurs="0" name="smtDealdatetimeTxt" type="xs:string" />
+<xs:element minOccurs="0" name="smtEndcodeTxt" type="xs:string" />
+<xs:element minOccurs="0" name="smtValiditydateTxt" type="xs:string" />
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+<xs:complexType name="smartCard">
+<xs:complexContent>
+<xs:extension base="tns:basePOJO">
+<xs:sequence>
+<xs:element minOccurs="0" name="smtAccounts" type="xs:string" />
+<xs:element minOccurs="0" name="smtBankbakno" type="xs:string" />
+<xs:element minOccurs="0" name="smtBankcardcode" type="xs:int" />
+<xs:element minOccurs="0" name="smtBlacklistinvoiceno" type="xs:long" />
+<xs:element minOccurs="0" name="smtCardcode" type="xs:string" />
+<xs:element minOccurs="0" name="smtCarddate" type="xs:dateTime" />
+<xs:element minOccurs="0" name="smtCardid" type="xs:long" />
+<xs:element minOccurs="0" name="smtCardno" type="xs:string" />
+<xs:element minOccurs="0" name="smtCardserial" type="xs:string" />
+<xs:element minOccurs="0" name="smtChangedate" type="xs:dateTime" />
+<xs:element minOccurs="0" name="smtCpucardserial" type="xs:string" />
+<xs:element minOccurs="0" name="smtDailycode" type="xs:string" />
+<xs:element minOccurs="0" name="smtDailyno" type="xs:long" />
+<xs:element minOccurs="0" name="smtDeposit" type="xs:double" />
+<xs:element minOccurs="0" name="smtDepreciation" type="xs:double" />
+<xs:element minOccurs="0" name="smtEndcode" type="xs:string" />
+<xs:element minOccurs="0" name="smtEnddate" type="xs:dateTime" />
+<xs:element minOccurs="0" name="smtIccardcode" type="xs:int" />
+<xs:element minOccurs="0" name="smtOldcardid" type="xs:int" />
+<xs:element minOccurs="0" name="smtOperatorid" type="xs:string" />
+<xs:element minOccurs="0" name="smtOrgId" type="xs:string" />
+<xs:element minOccurs="0" name="smtPassword" type="xs:string" />
+<xs:element minOccurs="0" name="smtPersonnelid" type="xs:long" />
+<xs:element minOccurs="0" name="smtReturndeposit" type="xs:double" />
+<xs:element minOccurs="0" name="smtShowcardno" type="xs:string" />
+<xs:element minOccurs="0" name="smtStartcode" type="xs:string" />
+<xs:element minOccurs="0" name="smtStartdate" type="xs:dateTime" />
+<xs:element minOccurs="0" name="smtValiditydate" type="xs:dateTime" />
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+<xs:complexType name="stringWrapper">
+<xs:sequence>
+<xs:element minOccurs="0" name="result" type="xs:string" />
+<xs:element minOccurs="0" name="resultCode" type="xs:string" />
+<xs:element minOccurs="0" name="resultMessage" type="xs:string" />
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="sumWrapper">
+<xs:sequence>
+<xs:element minOccurs="0" name="dataSum" type="xs:long" />
+<xs:element minOccurs="0" name="resultCode" type="xs:string" />
+<xs:element minOccurs="0" name="resultMessage" type="xs:string" />
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="itemPayWrapper">
+<xs:sequence>
+<xs:element maxOccurs="unbounded" minOccurs="0" name="itemPay" nillable="true" type="tns:itemPay" />
+<xs:element minOccurs="0" name="resultCode" type="xs:string" />
+<xs:element minOccurs="0" name="resultMessage" type="xs:string" />
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="itemPay">
+<xs:sequence>
+<xs:element minOccurs="0" name="accountName" type="xs:string" />
+<xs:element minOccurs="0" name="accountNo" type="xs:string" />
+<xs:element minOccurs="0" name="deptName" type="xs:string" />
+<xs:element minOccurs="0" name="itemCode" type="xs:string" />
+<xs:element minOccurs="0" name="itemName" type="xs:string" />
+<xs:element minOccurs="0" name="payDate" type="xs:string" />
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="accountWrapper">
+<xs:sequence>
+<xs:element minOccurs="0" name="account" type="tns:smartVirtual" />
+<xs:element minOccurs="0" name="resultCode" type="xs:string" />
+<xs:element minOccurs="0" name="resultMessage" type="xs:string" />
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="smartVirtual">
+<xs:complexContent>
+<xs:extension base="tns:basePOJO">
+<xs:sequence>
+<xs:element minOccurs="0" name="smtBalance" type="xs:string" />
+<xs:element minOccurs="0" name="smtCustmoney" type="xs:double" />
+<xs:element minOccurs="0" name="smtFixedmoney" type="xs:double" />
+<xs:element minOccurs="0" name="smtFullmoney" type="xs:double" />
+<xs:element minOccurs="0" name="smtLastdatetime" type="xs:dateTime" />
+<xs:element minOccurs="0" name="smtMoneycheck" type="xs:double" />
+<xs:element minOccurs="0" name="smtOpendatetime" type="xs:dateTime" />
+<xs:element minOccurs="0" name="smtOpensource" type="xs:string" />
+<xs:element minOccurs="0" name="smtPaypwd" type="xs:string" />
+<xs:element minOccurs="0" name="smtPersonnelid" type="xs:long" />
+<xs:element minOccurs="0" name="smtStatus" type="xs:string" />
+<xs:element minOccurs="0" name="smtTimes" type="xs:int" />
+<xs:element minOccurs="0" name="smtVirtualbalance" type="xs:double" />
+<xs:element minOccurs="0" name="smtVirtualid" type="xs:long" />
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+<xs:complexType name="personWrapper">
+<xs:sequence>
+<xs:element minOccurs="0" name="person" type="tns:personnel" />
+<xs:element minOccurs="0" name="resultCode" type="xs:string" />
+<xs:element minOccurs="0" name="resultMessage" type="xs:string" />
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="personnel">
+<xs:complexContent>
+<xs:extension base="tns:smartPersonnel">
+<xs:sequence>
+<xs:element minOccurs="0" name="smtBirthdayTxt" type="xs:string" />
+<xs:element minOccurs="0" name="smtCountrycodeTxt" type="xs:string" />
+<xs:element minOccurs="0" name="smtDeptcodeTxt" type="xs:string" />
+<xs:element minOccurs="0" name="smtDossiercodeTxt" type="xs:string" />
+<xs:element minOccurs="0" name="smtKnowledgecodeTxt" type="xs:string" />
+<xs:element minOccurs="0" name="smtManageOrgTxt" type="xs:string" />
+<xs:element minOccurs="0" name="smtMarriedTxt" type="xs:string" />
+<xs:element minOccurs="0" name="smtNativeTxt" type="xs:string" />
+<xs:element minOccurs="0" name="smtPeopleTxt" type="xs:string" />
+<xs:element minOccurs="0" name="smtPolityTxt" type="xs:string" />
+<xs:element minOccurs="0" name="smtPostcodeTxt" type="xs:string" />
+<xs:element minOccurs="0" name="smtSpecialtycodeTxt" type="xs:string" />
+<xs:element minOccurs="0" name="smtStDateTxt" type="xs:string" />
+<xs:element minOccurs="0" name="smtStFlagTxt" type="xs:string" />
+<xs:element minOccurs="0" name="smtStatuscodeTxt" type="xs:string" />
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+<xs:complexType name="smartPersonnel">
+<xs:complexContent>
+<xs:extension base="tns:basePOJO">
+<xs:sequence>
+<xs:element minOccurs="0" name="smtBirthday" type="xs:dateTime" />
+<xs:element minOccurs="0" name="smtCountrycode" type="xs:string" />
+<xs:element minOccurs="0" name="smtDailycode" type="xs:string" />
+<xs:element minOccurs="0" name="smtDailyno" type="xs:long" />
+<xs:element minOccurs="0" name="smtDatasource" type="xs:string" />
+<xs:element minOccurs="0" name="smtDegreecode" type="xs:string" />
+<xs:element minOccurs="0" name="smtDeptcode" type="xs:string" />
+<xs:element minOccurs="0" name="smtDossiercode" type="xs:string" />
+<xs:element minOccurs="0" name="smtDwelling" type="xs:string" />
+<xs:element minOccurs="0" name="smtEmail" type="xs:string" />
+<xs:element minOccurs="0" name="smtIdcardno" type="xs:string" />
+<xs:element minOccurs="0" name="smtIdcode" type="xs:string" />
+<xs:element minOccurs="0" name="smtIdno" type="xs:string" />
+<xs:element minOccurs="0" name="smtIncompanydate" type="xs:dateTime" />
+<xs:element minOccurs="0" name="smtIndatetime" type="xs:dateTime" />
+<xs:element minOccurs="0" name="smtKnowledgecode" type="xs:string" />
+<xs:element minOccurs="0" name="smtLevelcode" type="xs:string" />
+<xs:element minOccurs="0" name="smtLinkaddress" type="xs:string" />
+<xs:element minOccurs="0" name="smtLinkman" type="xs:string" />
+<xs:element minOccurs="0" name="smtLinkmanaddress" type="xs:string" />
+<xs:element minOccurs="0" name="smtLinkmanmobile" type="xs:string" />
+<xs:element minOccurs="0" name="smtLinkmanphone" type="xs:string" />
+<xs:element minOccurs="0" name="smtLinkunit" type="xs:string" />
+<xs:element minOccurs="0" name="smtManageOrg" type="xs:string" />
+<xs:element minOccurs="0" name="smtMarried" type="xs:string" />
+<xs:element minOccurs="0" name="smtMobiletelephone" type="xs:string" />
+<xs:element minOccurs="0" name="smtName" type="xs:string" />
+<xs:element minOccurs="0" name="smtNamespell" type="xs:string" />
+<xs:element minOccurs="0" name="smtNative" type="xs:string" />
+<xs:element minOccurs="0" name="smtPeople" type="xs:string" />
+<xs:element minOccurs="0" name="smtPersonnelid" type="xs:long" />
+<xs:element minOccurs="0" name="smtPhoneno" type="xs:string" />
+<xs:element minOccurs="0" name="smtPolity" type="xs:string" />
+<xs:element minOccurs="0" name="smtPostalcode" type="xs:string" />
+<xs:element minOccurs="0" name="smtPostcode" type="xs:string" />
+<xs:element minOccurs="0" name="smtSalarycode" type="xs:string" />
+<xs:element minOccurs="0" name="smtSalaryno" type="xs:string" />
+<xs:element minOccurs="0" name="smtSex" type="xs:string" />
+<xs:element minOccurs="0" name="smtSpecialtycode" type="xs:string" />
+<xs:element minOccurs="0" name="smtSpecialtypostcode" type="xs:string" />
+<xs:element minOccurs="0" name="smtStDate" type="xs:dateTime" />
+<xs:element minOccurs="0" name="smtStFlag" type="xs:byte" />
+<xs:element minOccurs="0" name="smtStPass" type="xs:string" />
+<xs:element minOccurs="0" name="smtStatuscode" type="xs:string" />
+<xs:element minOccurs="0" name="smtValiditydate" type="xs:byte" />
+<xs:element minOccurs="0" name="smtVisadate" type="xs:dateTime" />
+<xs:element minOccurs="0" name="smtVisaorgan" type="xs:string" />
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+<xs:complexType name="lastCardMoneyWrapper">
+<xs:sequence>
+<xs:element minOccurs="0" name="cardMoney" type="tns:smartCardmoney" />
+<xs:element minOccurs="0" name="resultCode" type="xs:string" />
+<xs:element minOccurs="0" name="resultMessage" type="xs:string" />
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="allowanceWrapper">
+<xs:sequence>
+<xs:element maxOccurs="unbounded" minOccurs="0" name="allowance" nillable="true" type="tns:allowance" />
+<xs:element minOccurs="0" name="resultCode" type="xs:string" />
+<xs:element minOccurs="0" name="resultMessage" type="xs:string" />
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="allowance" />
+<xs:complexType name="lastCardWrapper">
+<xs:sequence>
+<xs:element minOccurs="0" name="card" type="tns:card" />
+<xs:element minOccurs="0" name="resultCode" type="xs:string" />
+<xs:element minOccurs="0" name="resultMessage" type="xs:string" />
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="itemDealWrapper">
+<xs:sequence>
+<xs:element maxOccurs="unbounded" minOccurs="0" name="itemDeal" nillable="true" type="tns:smartItemdeal" />
+<xs:element minOccurs="0" name="resultCode" type="xs:string" />
+<xs:element minOccurs="0" name="resultMessage" type="xs:string" />
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="smartItemdeal">
+<xs:complexContent>
+<xs:extension base="tns:basePOJO">
+<xs:sequence>
+<xs:element minOccurs="0" name="smtAddby" type="xs:string" />
+<xs:element minOccurs="0" name="smtAdddt" type="xs:dateTime" />
+<xs:element minOccurs="0" name="smtChargemode" type="xs:boolean" />
+<xs:element minOccurs="0" name="smtDate" type="xs:dateTime" />
+<xs:element minOccurs="0" name="smtDesc" type="xs:string" />
+<xs:element minOccurs="0" name="smtDisplay" type="xs:boolean" />
+<xs:element minOccurs="0" name="smtDownmoney" type="xs:double" />
+<xs:element minOccurs="0" name="smtEndactdt" type="xs:dateTime" />
+<xs:element minOccurs="0" name="smtItemcode" type="xs:string" />
+<xs:element minOccurs="0" name="smtItemmoney" type="xs:double" />
+<xs:element minOccurs="0" name="smtItemname" type="xs:string" />
+<xs:element minOccurs="0" name="smtLactivedt" type="xs:boolean" />
+<xs:element minOccurs="0" name="smtLastmdby" type="xs:string" />
+<xs:element minOccurs="0" name="smtLastmddt" type="xs:dateTime" />
+<xs:element minOccurs="0" name="smtOperator" type="xs:string" />
+<xs:element minOccurs="0" name="smtOrgId" type="xs:string" />
+<xs:element minOccurs="0" name="smtPaymode" type="xs:boolean" />
+<xs:element minOccurs="0" name="smtPaysite" type="xs:boolean" />
+<xs:element minOccurs="0" name="smtPaytype" type="xs:boolean" />
+<xs:element minOccurs="0" name="smtRightassign" type="xs:boolean" />
+<xs:element minOccurs="0" name="smtStaractdt" type="xs:dateTime" />
+<xs:element minOccurs="0" name="smtUpmoney" type="xs:double" />
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+<xs:complexType name="imageWrapper">
+<xs:sequence>
+<xs:element minOccurs="0" name="photo" type="xs:base64Binary" />
+<xs:element minOccurs="0" name="resultCode" type="xs:string" />
+<xs:element minOccurs="0" name="resultMessage" type="xs:string" />
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="attenceWrapper">
+<xs:sequence>
+<xs:element maxOccurs="unbounded" minOccurs="0" name="attence" nillable="true" type="tns:attence" />
+<xs:element minOccurs="0" name="resultCode" type="xs:string" />
+<xs:element minOccurs="0" name="resultMessage" type="xs:string" />
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="attence">
+<xs:sequence>
+<xs:element minOccurs="0" name="authNo" type="xs:string" />
+<xs:element minOccurs="0" name="cardId" type="xs:string" />
+<xs:element minOccurs="0" name="date" type="xs:string" />
+<xs:element minOccurs="0" name="salaryNo" type="xs:string" />
+<xs:element minOccurs="0" name="showCardNo" type="xs:string" />
+</xs:sequence>
+</xs:complexType>
+<xs:complexType final="#all" name="dealArray">
+<xs:sequence>
+<xs:element maxOccurs="unbounded" minOccurs="0" name="item" nillable="true" type="tns:deal" />
+</xs:sequence>
+</xs:complexType>
+<xs:complexType final="#all" name="smartCardmoneyArray">
+<xs:sequence>
+<xs:element maxOccurs="unbounded" minOccurs="0" name="item" nillable="true" type="tns:smartCardmoney" />
+</xs:sequence>
+</xs:complexType>
+<xs:complexType final="#all" name="cardArray">
+<xs:sequence>
+<xs:element maxOccurs="unbounded" minOccurs="0" name="item" nillable="true" type="tns:card" />
+</xs:sequence>
+</xs:complexType>
+<xs:complexType final="#all" name="itemPayArray">
+<xs:sequence>
+<xs:element maxOccurs="unbounded" minOccurs="0" name="item" nillable="true" type="tns:itemPay" />
+</xs:sequence>
+</xs:complexType>
+<xs:complexType final="#all" name="allowanceArray">
+<xs:sequence>
+<xs:element maxOccurs="unbounded" minOccurs="0" name="item" nillable="true" type="tns:allowance" />
+</xs:sequence>
+</xs:complexType>
+<xs:complexType final="#all" name="smartItemdealArray">
+<xs:sequence>
+<xs:element maxOccurs="unbounded" minOccurs="0" name="item" nillable="true" type="tns:smartItemdeal" />
+</xs:sequence>
+</xs:complexType>
+<xs:complexType final="#all" name="attenceArray">
+<xs:sequence>
+<xs:element maxOccurs="unbounded" minOccurs="0" name="item" nillable="true" type="tns:attence" />
+</xs:sequence>
+</xs:complexType>
+<xs:element name="queryTrans" type="tns:queryTrans" />
+<xs:complexType name="queryTrans">
+<xs:sequence>
+<xs:element minOccurs="0" name="arg0" type="xs:string" />
+<xs:element minOccurs="0" name="arg1" type="xs:string" />
+<xs:element minOccurs="0" name="arg2" type="xs:string" />
+<xs:element minOccurs="0" name="arg3" type="xs:string" />
+<xs:element minOccurs="0" name="arg4" type="xs:string" />
+<xs:element minOccurs="0" name="arg5" type="xs:int" />
+<xs:element minOccurs="0" name="arg6" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+<xs:element name="queryTransResponse" type="tns:queryTransResponse" />
+<xs:complexType name="queryTransResponse">
+<xs:sequence>
+<xs:element minOccurs="0" name="return" type="tns:transWrapper" />
+</xs:sequence>
+</xs:complexType>
+<xs:element name="queryCardBalance" type="tns:queryCardBalance" />
+<xs:complexType name="queryCardBalance">
+<xs:sequence>
+<xs:element minOccurs="0" name="arg0" type="xs:string" />
+</xs:sequence>
+</xs:complexType>
+<xs:element name="queryCardBalanceResponse" type="tns:queryCardBalanceResponse" />
+<xs:complexType name="queryCardBalanceResponse">
+<xs:sequence>
+<xs:element minOccurs="0" name="return" type="tns:cardMoneyWrapper" />
+</xs:sequence>
+</xs:complexType>
+<xs:element name="queryCard" type="tns:queryCard" />
+<xs:complexType name="queryCard">
+<xs:sequence>
+<xs:element minOccurs="0" name="arg0" type="xs:string" />
+<xs:element minOccurs="0" name="arg1" type="xs:int" />
+<xs:element minOccurs="0" name="arg2" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+<xs:element name="queryCardResponse" type="tns:queryCardResponse" />
+<xs:complexType name="queryCardResponse">
+<xs:sequence>
+<xs:element minOccurs="0" name="return" type="tns:cardWrapper" />
+</xs:sequence>
+</xs:complexType>
+<xs:element name="queryConsumeTotal" type="tns:queryConsumeTotal" />
+<xs:complexType name="queryConsumeTotal">
+<xs:sequence>
+<xs:element minOccurs="0" name="arg0" type="xs:string" />
+<xs:element minOccurs="0" name="arg1" type="xs:string" />
+<xs:element minOccurs="0" name="arg2" type="xs:string" />
+<xs:element minOccurs="0" name="arg3" type="xs:string" />
+</xs:sequence>
+</xs:complexType>
+<xs:element name="queryConsumeTotalResponse" type="tns:queryConsumeTotalResponse" />
+<xs:complexType name="queryConsumeTotalResponse">
+<xs:sequence>
+<xs:element minOccurs="0" name="return" type="tns:stringWrapper" />
+</xs:sequence>
+</xs:complexType>
+<xs:element name="modifyAccountPassword" type="tns:modifyAccountPassword" />
+<xs:complexType name="modifyAccountPassword">
+<xs:sequence>
+<xs:element minOccurs="0" name="arg0" type="xs:string" />
+<xs:element minOccurs="0" name="arg1" type="xs:string" />
+<xs:element minOccurs="0" name="arg2" type="xs:string" />
+</xs:sequence>
+</xs:complexType>
+<xs:element name="modifyAccountPasswordResponse" type="tns:modifyAccountPasswordResponse" />
+<xs:complexType name="modifyAccountPasswordResponse">
+<xs:sequence>
+<xs:element minOccurs="0" name="return" type="tns:stringWrapper" />
+</xs:sequence>
+</xs:complexType>
+<xs:element name="payItemDeal" type="tns:payItemDeal" />
+<xs:complexType name="payItemDeal">
+<xs:sequence>
+<xs:element minOccurs="0" name="arg0" type="xs:string" />
+<xs:element minOccurs="0" name="arg1" type="xs:string" />
+<xs:element minOccurs="0" name="arg2" type="xs:string" />
+<xs:element minOccurs="0" name="arg3" type="xs:string" />
+</xs:sequence>
+</xs:complexType>
+<xs:element name="payItemDealResponse" type="tns:payItemDealResponse" />
+<xs:complexType name="payItemDealResponse">
+<xs:sequence>
+<xs:element minOccurs="0" name="return" type="tns:stringWrapper" />
+</xs:sequence>
+</xs:complexType>
+<xs:element name="queryAllowance" type="tns:queryAllowance" />
+<xs:complexType name="queryAllowance">
+<xs:sequence>
+<xs:element minOccurs="0" name="arg0" type="xs:string" />
+<xs:element minOccurs="0" name="arg1" type="xs:string" />
+</xs:sequence>
+</xs:complexType>
+<xs:element name="queryAllowanceResponse" type="tns:queryAllowanceResponse" />
+<xs:complexType name="queryAllowanceResponse">
+<xs:sequence>
+<xs:element minOccurs="0" name="return" type="tns:sumWrapper" />
+</xs:sequence>
+</xs:complexType>
+<xs:element name="queryItemPay" type="tns:queryItemPay" />
+<xs:complexType name="queryItemPay">
+<xs:sequence>
+<xs:element minOccurs="0" name="arg0" type="xs:string" />
+<xs:element minOccurs="0" name="arg1" type="xs:string" />
+<xs:element minOccurs="0" name="arg2" type="xs:int" />
+<xs:element minOccurs="0" name="arg3" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+<xs:element name="queryItemPayResponse" type="tns:queryItemPayResponse" />
+<xs:complexType name="queryItemPayResponse">
+<xs:sequence>
+<xs:element minOccurs="0" name="return" type="tns:itemPayWrapper" />
+</xs:sequence>
+</xs:complexType>
+<xs:element name="queryAccount" type="tns:queryAccount" />
+<xs:complexType name="queryAccount">
+<xs:sequence>
+<xs:element minOccurs="0" name="arg0" type="xs:string" />
+</xs:sequence>
+</xs:complexType>
+<xs:element name="queryAccountResponse" type="tns:queryAccountResponse" />
+<xs:complexType name="queryAccountResponse">
+<xs:sequence>
+<xs:element minOccurs="0" name="return" type="tns:accountWrapper" />
+</xs:sequence>
+</xs:complexType>
+<xs:element name="queryCardSum" type="tns:queryCardSum" />
+<xs:complexType name="queryCardSum">
+<xs:sequence>
+<xs:element minOccurs="0" name="arg0" type="xs:string" />
+</xs:sequence>
+</xs:complexType>
+<xs:element name="queryCardSumResponse" type="tns:queryCardSumResponse" />
+<xs:complexType name="queryCardSumResponse">
+<xs:sequence>
+<xs:element minOccurs="0" name="return" type="tns:sumWrapper" />
+</xs:sequence>
+</xs:complexType>
+<xs:element name="queryPerson" type="tns:queryPerson" />
+<xs:complexType name="queryPerson">
+<xs:sequence>
+<xs:element minOccurs="0" name="arg0" type="xs:string" />
+</xs:sequence>
+</xs:complexType>
+<xs:element name="queryPersonResponse" type="tns:queryPersonResponse" />
+<xs:complexType name="queryPersonResponse">
+<xs:sequence>
+<xs:element minOccurs="0" name="return" type="tns:personWrapper" />
+</xs:sequence>
+</xs:complexType>
+<xs:element name="modifyUserPassword" type="tns:modifyUserPassword" />
+<xs:complexType name="modifyUserPassword">
+<xs:sequence>
+<xs:element minOccurs="0" name="arg0" type="xs:string" />
+<xs:element minOccurs="0" name="arg1" type="xs:string" />
+<xs:element minOccurs="0" name="arg2" type="xs:string" />
+</xs:sequence>
+</xs:complexType>
+<xs:element name="modifyUserPasswordResponse" type="tns:modifyUserPasswordResponse" />
+<xs:complexType name="modifyUserPasswordResponse">
+<xs:sequence>
+<xs:element minOccurs="0" name="return" type="tns:stringWrapper" />
+</xs:sequence>
+</xs:complexType>
+<xs:element name="queryLastCardBalance" type="tns:queryLastCardBalance" />
+<xs:complexType name="queryLastCardBalance">
+<xs:sequence>
+<xs:element minOccurs="0" name="arg0" type="xs:string" />
+</xs:sequence>
+</xs:complexType>
+<xs:element name="queryLastCardBalanceResponse" type="tns:queryLastCardBalanceResponse" />
+<xs:complexType name="queryLastCardBalanceResponse">
+<xs:sequence>
+<xs:element minOccurs="0" name="return" type="tns:lastCardMoneyWrapper" />
+</xs:sequence>
+</xs:complexType>
+<xs:element name="lockGate" type="tns:lockGate" />
+<xs:complexType name="lockGate">
+<xs:sequence>
+<xs:element minOccurs="0" name="arg0" type="xs:string" />
+<xs:element minOccurs="0" name="arg1" type="xs:string" />
+</xs:sequence>
+</xs:complexType>
+<xs:element name="lockGateResponse" type="tns:lockGateResponse" />
+<xs:complexType name="lockGateResponse">
+<xs:sequence>
+<xs:element minOccurs="0" name="return" type="tns:stringWrapper" />
+</xs:sequence>
+</xs:complexType>
+<xs:element name="queryAttenceSum" type="tns:queryAttenceSum" />
+<xs:complexType name="queryAttenceSum">
+<xs:sequence>
+<xs:element minOccurs="0" name="arg0" type="xs:string" />
+<xs:element minOccurs="0" name="arg1" type="xs:string" />
+</xs:sequence>
+</xs:complexType>
+<xs:element name="queryAttenceSumResponse" type="tns:queryAttenceSumResponse" />
+<xs:complexType name="queryAttenceSumResponse">
+<xs:sequence>
+<xs:element minOccurs="0" name="return" type="tns:sumWrapper" />
+</xs:sequence>
+</xs:complexType>
+<xs:element name="queryAllowance1" type="tns:queryAllowance1" />
+<xs:complexType name="queryAllowance1">
+<xs:sequence>
+<xs:element minOccurs="0" name="arg0" type="xs:string" />
+<xs:element minOccurs="0" name="arg1" type="xs:string" />
+<xs:element minOccurs="0" name="arg2" type="xs:int" />
+<xs:element minOccurs="0" name="arg3" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+<xs:element name="queryAllowance1Response" type="tns:queryAllowance1Response" />
+<xs:complexType name="queryAllowance1Response">
+<xs:sequence>
+<xs:element minOccurs="0" name="return" type="tns:allowanceWrapper" />
+</xs:sequence>
+</xs:complexType>
+<xs:element name="unLockGate" type="tns:unLockGate" />
+<xs:complexType name="unLockGate">
+<xs:sequence>
+<xs:element minOccurs="0" name="arg0" type="xs:string" />
+<xs:element minOccurs="0" name="arg1" type="xs:string" />
+</xs:sequence>
+</xs:complexType>
+<xs:element name="unLockGateResponse" type="tns:unLockGateResponse" />
+<xs:complexType name="unLockGateResponse">
+<xs:sequence>
+<xs:element minOccurs="0" name="return" type="tns:stringWrapper" />
+</xs:sequence>
+</xs:complexType>
+<xs:element name="unLockCard" type="tns:unLockCard" />
+<xs:complexType name="unLockCard">
+<xs:sequence>
+<xs:element minOccurs="0" name="arg0" type="xs:string" />
+<xs:element minOccurs="0" name="arg1" type="xs:string" />
+</xs:sequence>
+</xs:complexType>
+<xs:element name="unLockCardResponse" type="tns:unLockCardResponse" />
+<xs:complexType name="unLockCardResponse">
+<xs:sequence>
+<xs:element minOccurs="0" name="return" type="tns:stringWrapper" />
+</xs:sequence>
+</xs:complexType>
+<xs:element name="validUserPassword" type="tns:validUserPassword" />
+<xs:complexType name="validUserPassword">
+<xs:sequence>
+<xs:element minOccurs="0" name="arg0" type="xs:string" />
+<xs:element minOccurs="0" name="arg1" type="xs:string" />
+</xs:sequence>
+</xs:complexType>
+<xs:element name="validUserPasswordResponse" type="tns:validUserPasswordResponse" />
+<xs:complexType name="validUserPasswordResponse">
+<xs:sequence>
+<xs:element minOccurs="0" name="return" type="tns:stringWrapper" />
+</xs:sequence>
+</xs:complexType>
+<xs:element name="lockCard" type="tns:lockCard" />
+<xs:complexType name="lockCard">
+<xs:sequence>
+<xs:element minOccurs="0" name="arg0" type="xs:string" />
+<xs:element minOccurs="0" name="arg1" type="xs:string" />
+</xs:sequence>
+</xs:complexType>
+<xs:element name="lockCardResponse" type="tns:lockCardResponse" />
+<xs:complexType name="lockCardResponse">
+<xs:sequence>
+<xs:element minOccurs="0" name="return" type="tns:stringWrapper" />
+</xs:sequence>
+</xs:complexType>
+<xs:element name="queryLastCard" type="tns:queryLastCard" />
+<xs:complexType name="queryLastCard">
+<xs:sequence>
+<xs:element minOccurs="0" name="arg0" type="xs:string" />
+</xs:sequence>
+</xs:complexType>
+<xs:element name="queryLastCardResponse" type="tns:queryLastCardResponse" />
+<xs:complexType name="queryLastCardResponse">
+<xs:sequence>
+<xs:element minOccurs="0" name="return" type="tns:lastCardWrapper" />
+</xs:sequence>
+</xs:complexType>
+<xs:element name="queryItemDeal" type="tns:queryItemDeal" />
+<xs:complexType name="queryItemDeal">
+<xs:sequence />
+</xs:complexType>
+<xs:element name="queryItemDealResponse" type="tns:queryItemDealResponse" />
+<xs:complexType name="queryItemDealResponse">
+<xs:sequence>
+<xs:element minOccurs="0" name="return" type="tns:itemDealWrapper" />
+</xs:sequence>
+</xs:complexType>
+<xs:element name="queryPersonPhoto" type="tns:queryPersonPhoto" />
+<xs:complexType name="queryPersonPhoto">
+<xs:sequence>
+<xs:element minOccurs="0" name="arg0" type="xs:string" />
+</xs:sequence>
+</xs:complexType>
+<xs:element name="queryPersonPhotoResponse" type="tns:queryPersonPhotoResponse" />
+<xs:complexType name="queryPersonPhotoResponse">
+<xs:sequence>
+<xs:element minOccurs="0" name="return" type="tns:imageWrapper" />
+</xs:sequence>
+</xs:complexType>
+<xs:element name="queryInMoneyTotal" type="tns:queryInMoneyTotal" />
+<xs:complexType name="queryInMoneyTotal">
+<xs:sequence>
+<xs:element minOccurs="0" name="arg0" type="xs:string" />
+<xs:element minOccurs="0" name="arg1" type="xs:string" />
+<xs:element minOccurs="0" name="arg2" type="xs:string" />
+<xs:element minOccurs="0" name="arg3" type="xs:string" />
+</xs:sequence>
+</xs:complexType>
+<xs:element name="queryInMoneyTotalResponse" type="tns:queryInMoneyTotalResponse" />
+<xs:complexType name="queryInMoneyTotalResponse">
+<xs:sequence>
+<xs:element minOccurs="0" name="return" type="tns:stringWrapper" />
+</xs:sequence>
+</xs:complexType>
+<xs:element name="queryAttence" type="tns:queryAttence" />
+<xs:complexType name="queryAttence">
+<xs:sequence>
+<xs:element minOccurs="0" name="arg0" type="xs:string" />
+<xs:element minOccurs="0" name="arg1" type="xs:string" />
+<xs:element minOccurs="0" name="arg2" type="xs:int" />
+<xs:element minOccurs="0" name="arg3" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+<xs:element name="queryAttenceResponse" type="tns:queryAttenceResponse" />
+<xs:complexType name="queryAttenceResponse">
+<xs:sequence>
+<xs:element minOccurs="0" name="return" type="tns:attenceWrapper" />
+</xs:sequence>
+</xs:complexType>
+<xs:element name="queryTransSum" type="tns:queryTransSum" />
+<xs:complexType name="queryTransSum">
+<xs:sequence>
+<xs:element minOccurs="0" name="arg0" type="xs:string" />
+<xs:element minOccurs="0" name="arg1" type="xs:string" />
+<xs:element minOccurs="0" name="arg2" type="xs:string" />
+<xs:element minOccurs="0" name="arg3" type="xs:string" />
+<xs:element minOccurs="0" name="arg4" type="xs:string" />
+</xs:sequence>
+</xs:complexType>
+<xs:element name="queryTransSumResponse" type="tns:queryTransSumResponse" />
+<xs:complexType name="queryTransSumResponse">
+<xs:sequence>
+<xs:element minOccurs="0" name="return" type="tns:sumWrapper" />
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="queryAttenceResponse">
+    <wsdl:part element="tns:queryAttenceResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="queryAttenceSumResponse">
+    <wsdl:part element="tns:queryAttenceSumResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="queryTransResponse">
+    <wsdl:part element="tns:queryTransResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="unLockCardResponse">
+    <wsdl:part element="tns:unLockCardResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="unLockGateResponse">
+    <wsdl:part element="tns:unLockGateResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="queryAccount">
+    <wsdl:part element="tns:queryAccount" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="queryConsumeTotalResponse">
+    <wsdl:part element="tns:queryConsumeTotalResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="modifyUserPassword">
+    <wsdl:part element="tns:modifyUserPassword" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="queryAttenceSum">
+    <wsdl:part element="tns:queryAttenceSum" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="queryPersonPhoto">
+    <wsdl:part element="tns:queryPersonPhoto" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="queryTransSum">
+    <wsdl:part element="tns:queryTransSum" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="queryAllowanceResponse">
+    <wsdl:part element="tns:queryAllowanceResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="modifyUserPasswordResponse">
+    <wsdl:part element="tns:modifyUserPasswordResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="queryAllowance1Response">
+    <wsdl:part element="tns:queryAllowance1Response" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="validUserPassword">
+    <wsdl:part element="tns:validUserPassword" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="queryPersonPhotoResponse">
+    <wsdl:part element="tns:queryPersonPhotoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="queryAccountResponse">
+    <wsdl:part element="tns:queryAccountResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="queryPersonResponse">
+    <wsdl:part element="tns:queryPersonResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="queryTrans">
+    <wsdl:part element="tns:queryTrans" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="modifyAccountPassword">
+    <wsdl:part element="tns:modifyAccountPassword" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="queryCardBalanceResponse">
+    <wsdl:part element="tns:queryCardBalanceResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="queryAttence">
+    <wsdl:part element="tns:queryAttence" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="lockGateResponse">
+    <wsdl:part element="tns:lockGateResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="queryCard">
+    <wsdl:part element="tns:queryCard" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="queryTransSumResponse">
+    <wsdl:part element="tns:queryTransSumResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="queryItemDealResponse">
+    <wsdl:part element="tns:queryItemDealResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="queryInMoneyTotalResponse">
+    <wsdl:part element="tns:queryInMoneyTotalResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="queryLastCard">
+    <wsdl:part element="tns:queryLastCard" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="queryLastCardBalance">
+    <wsdl:part element="tns:queryLastCardBalance" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="queryAllowance">
+    <wsdl:part element="tns:queryAllowance" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="queryLastCardResponse">
+    <wsdl:part element="tns:queryLastCardResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="queryInMoneyTotal">
+    <wsdl:part element="tns:queryInMoneyTotal" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="queryCardBalance">
+    <wsdl:part element="tns:queryCardBalance" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="queryCardResponse">
+    <wsdl:part element="tns:queryCardResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="payItemDeal">
+    <wsdl:part element="tns:payItemDeal" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="queryItemPay">
+    <wsdl:part element="tns:queryItemPay" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="unLockCard">
+    <wsdl:part element="tns:unLockCard" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="lockCard">
+    <wsdl:part element="tns:lockCard" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="queryItemDeal">
+    <wsdl:part element="tns:queryItemDeal" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="validUserPasswordResponse">
+    <wsdl:part element="tns:validUserPasswordResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="queryCardSum">
+    <wsdl:part element="tns:queryCardSum" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="lockGate">
+    <wsdl:part element="tns:lockGate" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="queryItemPayResponse">
+    <wsdl:part element="tns:queryItemPayResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="queryLastCardBalanceResponse">
+    <wsdl:part element="tns:queryLastCardBalanceResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="payItemDealResponse">
+    <wsdl:part element="tns:payItemDealResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="unLockGate">
+    <wsdl:part element="tns:unLockGate" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="queryConsumeTotal">
+    <wsdl:part element="tns:queryConsumeTotal" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="queryCardSumResponse">
+    <wsdl:part element="tns:queryCardSumResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="lockCardResponse">
+    <wsdl:part element="tns:lockCardResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="modifyAccountPasswordResponse">
+    <wsdl:part element="tns:modifyAccountPasswordResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="queryAllowance1">
+    <wsdl:part element="tns:queryAllowance1" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="queryPerson">
+    <wsdl:part element="tns:queryPerson" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="IPersonBusinessServicePortType">
+    <wsdl:operation name="queryTrans">
+      <wsdl:input message="tns:queryTrans" name="queryTrans">
+    </wsdl:input>
+      <wsdl:output message="tns:queryTransResponse" name="queryTransResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryCardBalance">
+      <wsdl:input message="tns:queryCardBalance" name="queryCardBalance">
+    </wsdl:input>
+      <wsdl:output message="tns:queryCardBalanceResponse" name="queryCardBalanceResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryCard">
+      <wsdl:input message="tns:queryCard" name="queryCard">
+    </wsdl:input>
+      <wsdl:output message="tns:queryCardResponse" name="queryCardResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryConsumeTotal">
+      <wsdl:input message="tns:queryConsumeTotal" name="queryConsumeTotal">
+    </wsdl:input>
+      <wsdl:output message="tns:queryConsumeTotalResponse" name="queryConsumeTotalResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modifyAccountPassword">
+      <wsdl:input message="tns:modifyAccountPassword" name="modifyAccountPassword">
+    </wsdl:input>
+      <wsdl:output message="tns:modifyAccountPasswordResponse" name="modifyAccountPasswordResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="payItemDeal">
+      <wsdl:input message="tns:payItemDeal" name="payItemDeal">
+    </wsdl:input>
+      <wsdl:output message="tns:payItemDealResponse" name="payItemDealResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryAllowance">
+      <wsdl:input message="tns:queryAllowance" name="queryAllowance">
+    </wsdl:input>
+      <wsdl:output message="tns:queryAllowanceResponse" name="queryAllowanceResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryItemPay">
+      <wsdl:input message="tns:queryItemPay" name="queryItemPay">
+    </wsdl:input>
+      <wsdl:output message="tns:queryItemPayResponse" name="queryItemPayResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryAccount">
+      <wsdl:input message="tns:queryAccount" name="queryAccount">
+    </wsdl:input>
+      <wsdl:output message="tns:queryAccountResponse" name="queryAccountResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryCardSum">
+      <wsdl:input message="tns:queryCardSum" name="queryCardSum">
+    </wsdl:input>
+      <wsdl:output message="tns:queryCardSumResponse" name="queryCardSumResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryPerson">
+      <wsdl:input message="tns:queryPerson" name="queryPerson">
+    </wsdl:input>
+      <wsdl:output message="tns:queryPersonResponse" name="queryPersonResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modifyUserPassword">
+      <wsdl:input message="tns:modifyUserPassword" name="modifyUserPassword">
+    </wsdl:input>
+      <wsdl:output message="tns:modifyUserPasswordResponse" name="modifyUserPasswordResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryLastCardBalance">
+      <wsdl:input message="tns:queryLastCardBalance" name="queryLastCardBalance">
+    </wsdl:input>
+      <wsdl:output message="tns:queryLastCardBalanceResponse" name="queryLastCardBalanceResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="lockGate">
+      <wsdl:input message="tns:lockGate" name="lockGate">
+    </wsdl:input>
+      <wsdl:output message="tns:lockGateResponse" name="lockGateResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryAttenceSum">
+      <wsdl:input message="tns:queryAttenceSum" name="queryAttenceSum">
+    </wsdl:input>
+      <wsdl:output message="tns:queryAttenceSumResponse" name="queryAttenceSumResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryAllowance1">
+      <wsdl:input message="tns:queryAllowance1" name="queryAllowance1">
+    </wsdl:input>
+      <wsdl:output message="tns:queryAllowance1Response" name="queryAllowance1Response">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="unLockGate">
+      <wsdl:input message="tns:unLockGate" name="unLockGate">
+    </wsdl:input>
+      <wsdl:output message="tns:unLockGateResponse" name="unLockGateResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="unLockCard">
+      <wsdl:input message="tns:unLockCard" name="unLockCard">
+    </wsdl:input>
+      <wsdl:output message="tns:unLockCardResponse" name="unLockCardResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="validUserPassword">
+      <wsdl:input message="tns:validUserPassword" name="validUserPassword">
+    </wsdl:input>
+      <wsdl:output message="tns:validUserPasswordResponse" name="validUserPasswordResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="lockCard">
+      <wsdl:input message="tns:lockCard" name="lockCard">
+    </wsdl:input>
+      <wsdl:output message="tns:lockCardResponse" name="lockCardResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryLastCard">
+      <wsdl:input message="tns:queryLastCard" name="queryLastCard">
+    </wsdl:input>
+      <wsdl:output message="tns:queryLastCardResponse" name="queryLastCardResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryItemDeal">
+      <wsdl:input message="tns:queryItemDeal" name="queryItemDeal">
+    </wsdl:input>
+      <wsdl:output message="tns:queryItemDealResponse" name="queryItemDealResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryPersonPhoto">
+      <wsdl:input message="tns:queryPersonPhoto" name="queryPersonPhoto">
+    </wsdl:input>
+      <wsdl:output message="tns:queryPersonPhotoResponse" name="queryPersonPhotoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryInMoneyTotal">
+      <wsdl:input message="tns:queryInMoneyTotal" name="queryInMoneyTotal">
+    </wsdl:input>
+      <wsdl:output message="tns:queryInMoneyTotalResponse" name="queryInMoneyTotalResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryAttence">
+      <wsdl:input message="tns:queryAttence" name="queryAttence">
+    </wsdl:input>
+      <wsdl:output message="tns:queryAttenceResponse" name="queryAttenceResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryTransSum">
+      <wsdl:input message="tns:queryTransSum" name="queryTransSum">
+    </wsdl:input>
+      <wsdl:output message="tns:queryTransSumResponse" name="queryTransSumResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="IPersonBusinessServiceSoapBinding" type="tns:IPersonBusinessServicePortType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="queryTrans">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="queryTrans">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="queryTransResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryCard">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="queryCard">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="queryCardResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryCardBalance">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="queryCardBalance">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="queryCardBalanceResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modifyAccountPassword">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="modifyAccountPassword">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="modifyAccountPasswordResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryConsumeTotal">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="queryConsumeTotal">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="queryConsumeTotalResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="payItemDeal">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="payItemDeal">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="payItemDealResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryAllowance">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="queryAllowance">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="queryAllowanceResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryItemPay">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="queryItemPay">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="queryItemPayResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryAccount">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="queryAccount">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="queryAccountResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryCardSum">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="queryCardSum">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="queryCardSumResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryPerson">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="queryPerson">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="queryPersonResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modifyUserPassword">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="modifyUserPassword">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="modifyUserPasswordResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="lockGate">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="lockGate">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="lockGateResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryLastCardBalance">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="queryLastCardBalance">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="queryLastCardBalanceResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryAttenceSum">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="queryAttenceSum">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="queryAttenceSumResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryAllowance1">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="queryAllowance1">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="queryAllowance1Response">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="unLockGate">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="unLockGate">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="unLockGateResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="unLockCard">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="unLockCard">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="unLockCardResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="validUserPassword">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="validUserPassword">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="validUserPasswordResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="lockCard">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="lockCard">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="lockCardResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryItemDeal">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="queryItemDeal">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="queryItemDealResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryLastCard">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="queryLastCard">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="queryLastCardResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryPersonPhoto">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="queryPersonPhoto">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="queryPersonPhotoResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryAttence">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="queryAttence">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="queryAttenceResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryInMoneyTotal">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="queryInMoneyTotal">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="queryInMoneyTotalResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryTransSum">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="queryTransSum">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="queryTransSumResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="IPersonBusinessService">
+    <wsdl:port binding="tns:IPersonBusinessServiceSoapBinding" name="IPersonBusinessServicePort">
+      <soap:address location="http://172.168.250.2:9000/IPersonBusinessService/IPersonBusinessServicePort" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

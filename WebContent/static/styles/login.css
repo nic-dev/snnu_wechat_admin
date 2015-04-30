@@ -1,0 +1,8 @@
+#login_container{
+	width:1200px;
+	margin-top:100px;
+}
+#login_container .logo{
+	height:300px;
+	border-right: 3px solid green;
+}

@@ -1,0 +1,43 @@
+#header {
+
+	
+	width: 100%;
+	
+}
+#header .title{
+	font-size:20px;
+	font-weight:bold;
+	text-align: left;
+	line-height: 24px;
+}
+#header .info{
+	margin-top:12px;
+ width:100%;
+ font-size:12px;
+}
+#header .create_time{
+	float:left;
+}
+#header .author{
+	float:left;
+	margin-left:20px;
+	color:#607FA6;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	overflow:hidden;
+	cursor: pointer;
+}
+#header  .logo {
+	margin-top:10px;
+	width: 100%;
+	text-align: center;
+}
+
+#header .logo img {
+	margin-top: 0px;
+	margin-left: 0;
+	/*max-height: 200px;*/
+	width: 100%;
+	max-width:400px;
+	
+}

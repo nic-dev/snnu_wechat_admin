@@ -1,0 +1,435 @@
+/*修正不引用jquery mobile css 后留下的样式问题*/
+.ui-loader {
+	display: none !important;
+}
+/*自定义样式开始*/
+* {
+	margin: 0;
+	padding: 0;
+}
+
+*,*:before,*:after {
+	box-sizing: border-box;
+}
+
+html {
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	min-height: 300px;
+}
+
+body { /*
+	background: linear-gradient(#F9F9F9, #EEEEEE) repeat scroll 0 0 #F9F9F9;
+	border: 1px solid #AAAAAA;
+	color: #333333;
+	text-shadow: 0 1px 0 #FFFFFF;
+	width:100%;
+	*/
+	opacity: 0;
+	background-color: #efefef;
+}
+
+body.gradient {
+	/*background:linear-gradient(#EEEEEE,#8BC08B) repeat fixed 0 0 ;*/
+	background: linear-gradient(#F9F9F9, #77A8AD) repeat fixed 0 0;
+}
+
+img {
+	max-width: 100%;
+}
+
+input[type="text"],textarea,fieldset {
+	border: medium none;
+	outline: medium none;
+}
+
+li {
+	list-style-type: none;
+}
+
+fieldset {
+	border: 0 none;
+	line-height: 30px;
+}
+
+fieldset label {
+	font-size: 12px;
+	color: #333;
+}
+
+a {
+	color: inherit;
+}
+
+.clear {
+	clear: both;
+	height: 1px;
+	margin-top: -1px;
+	overflow: hidden;
+}
+
+.text_center {
+	text-align: center !important;
+}
+
+.text_left {
+	text-align: left !important;
+}
+
+.text_right {
+	text-align: right !important;
+}
+
+.h {
+	display: none;
+}
+
+.hi {
+	display: none !important;
+}
+
+.col_1 {
+	width: 10% !important;
+}
+
+.col_2 {
+	width: 20% !important;
+}
+
+.col_3 {
+	width: 30% !important;
+}
+
+.col_4 {
+	width: 40% !important;
+}
+
+.col_5 {
+	width: 50% !important;
+}
+
+.col_6 {
+	width: 60% !important;
+}
+
+.col_7 {
+	width: 70% !important;
+}
+
+.col_8 {
+	width: 80% !important;
+}
+
+.col_9 {
+	width: 90% !important;
+}
+
+.vmpage_container {
+	width: 100%;
+	height: 100%;
+	background-colore: yellow;
+	display: table;
+}
+
+.vmpage {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.vmcontainer {
+	
+}
+
+.vmpanel {
+	width: 100%;
+	padding: 10px;
+}
+
+.vmpanel_border {
+	border: 1px solid #e0e0e0;
+	border-radius: 5px;
+}
+
+.vmpanel_tips {
+	background-color: #FAF3D9;
+	border: 1px solid #EDDA92;
+	font-size: 14px;
+	line-height: 34px;
+	color: #7E712A;
+	overflow: hidden;
+	padding: 10px;
+	text-align: center;
+}
+
+.vmpage .vmpanel {
+	
+}
+
+.vminput_wrap {
+	-moz-box-shadow: inset 0 1px 4px rgba(0, 0, 0, .2);
+	-webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, .2);
+	box-shadow: inset 0 1px 4px rgba(0, 0, 0, .2);
+}
+
+input[type="text"].vminput {
+	width: 100%;
+	height: 30px;
+	
+	border-radius: 5px;
+	
+	color: #3E3E3E;
+}
+
+input[type="text"].vminput:hover { /*border: 1px solid blue;*/
+	
+}
+
+input[type="text"].vminput-border {
+	/*
+	box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2) inset;
+	-webkit-box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.2);*/
+	border: 1px solid #aaa;
+}
+
+input[type="text"].vminput-lg {
+	height: 40px;
+	line-height: 40px;
+	font-size: 18px;
+}
+
+.vmbutton {
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	border-radius: 5px;
+	border: 1px solid #eee;
+	border: 0 none;
+	cursor: pointer;
+}
+
+.vmbutton-inline {
+	width: auto;
+	display: inline-block;
+}
+
+.vmbutton-lg {
+	height: 40px;
+	line-height: 40px;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.vmbutton_ok {
+	background-color: #40aa53;
+	color: #fff;
+}
+
+.vmbutton_cancel {
+	background-color: #459ae9;
+	color: #fff;
+}
+
+.vmbutton_link {
+	background-color: #f5f5f5;
+	color: #0079FF;
+}
+
+.vmlist {
+	width: 100%;
+	border-radius: 5px;
+	border: 1px solid #e0e0e0;
+	color: #333;
+	background-color: #fff;
+	line-height: 30px;
+	margin-top: 5px;
+}
+
+.vmlist .alert {
+	color: #AE1C1C !important;
+}
+
+.vmlist li {
+	border-bottom: 1px solid #eee;
+	width: 100%;
+	padding: 0 10px;
+	font-size: 14px;
+	line-height: 30px;
+}
+
+.vmlist li:last-child {
+	border-bottom: 0 none;
+}
+
+.vmlist li .tips { /*float:left;*/
+	display: inline-block;
+	line-height: 30px;
+	overflow: hidden;
+	word-wrap: break-work;
+	vertical-align: top;
+	color: #658FBD;
+}
+
+.vmlist li .info { /*float:right;*/
+	display: inline-block;
+	line-height: 30px;
+	color: #141414;
+	word-wrap: break-work;
+	overflow: hidden;
+	text-align: left;
+	vertical-align: top;
+}
+
+.vmlist li.header {
+	background-color: #dedede;
+	position: relative;
+	border-bottom: 0 none;
+}
+
+.vmlist li.header .tips {
+	font-weight: bold;
+	color: #000;
+	font-size: 14px;
+}
+
+.vmlist li.header .info {
+	position: absolute;
+	right: 40px;
+	text-align: right;
+	max-width: 40%;
+	overflow: hidden;
+}
+
+.vmlist li.header i {
+	float: right;
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+}
+
+.vmlist li.header i.fold {
+	background: url("../../images/base.png") no-repeat scroll 15px -3454px;
+}
+
+.vmlist li.header i.unfold {
+	background: url("../../images/base.png") no-repeat scroll 15px -3428px;
+}
+
+.login_panel {
+	
+}
+
+.login_panel fieldset {
+	border: 1px solid #eee;
+	height: 38px;
+	line-height: 38px;
+	border-radius: 5px;
+	display: block;
+	margin-bottom: 10px;
+	background-color: #fff;
+}
+
+.login_panel fieldset.opt {
+	border: 0 none;
+}
+
+.login_panel fieldset input {
+	float: left;
+	background-color: #fff;
+	height: 36px;
+	/*	border:1px solid #eee;*/
+	border: 0 none;
+	width: 80%;
+	height: 100%;
+	font-size: 16px;
+	padding-left: 6px
+}
+
+.login_panel fieldset i {
+	float: left;
+	width: 36px;
+	height: 36px;
+	border-right: 1px solid #eee;
+	overflow: hidden;
+}
+
+.login_panel fieldset i.user {
+	background: url('../../images/icon_login.png') 11px 11px no-repeat;
+}
+
+.login_panel fieldset i.pwd {
+	background: url('../../images/icon_login.png') 11px -18px no-repeat;
+}
+
+.login_panel fieldset button {
+	
+}
+
+.js_alert {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	/*	width: 300px; */ /*待用js方式修正居中*/
+	width: 100%;
+	margin: 0 auto;
+	padding: 5px 20px;
+	line-height: 20px;
+	text-align: center;
+	color: #fff;
+	z-index: 10000;
+}
+
+.js_alert_error {
+	background: red;
+}
+
+.js_alert_tips {
+	background: green
+}
+
+#mobile_dialog {
+	background: #f5f5f5;
+	border: 1px solid #eee;
+	/*opacity:0.9;*/
+	min-height: 40px;
+	min-width: 150px;
+	width: 90%;
+	/*position: absolute;*/
+	position: fixed;
+	border-radius: 5px;
+	z-index: 100;
+}
+
+#mobile_dialog .header {
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	width: 100%;
+	font-weight: bold;
+	font-size: 18px;
+}
+
+#mobile_dialog .content {
+	width: 100%;
+	padding: 10px;
+	line-height: 25px;
+	text-align: center;
+}
+
+#mobile_dialog .content img {
+	width: 30px;
+	height: 30px;
+}
+
+#mobile_dialog .opt {
+	border-top: 2px solid #ccc; width; 100%;
+	text-align: center;
+	height: 50px;
+}
+
+#mobile_dialog .opt button {
+	background-color: #f5f5f5;
+	color: #0079FF;
+	font-size: 16px;
+	height: 49px;
+	line-height: 49px;
+}

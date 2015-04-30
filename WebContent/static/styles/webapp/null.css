@@ -1,0 +1,28 @@
+#container{
+	width:100%;
+	margin-top:100px;
+	text-align: center;
+	font-size: 16px;
+	color:#999;
+	
+}
+#title{
+	border-top:1px solid green;
+	height:25px;
+	line-height: 25px;
+}
+#title span{
+	background-color: green;
+	color:white;
+	font-weight: bold;
+	padding:5px ;
+	
+	
+}
+#content li{
+	line-height:28px;
+	border-bottom: 1px solid #B7DF3E;
+	font-size:13px;
+	background:url('../../images/dots.jpg') 1px 10px no-repeat;
+	padding-left:15px;
+}

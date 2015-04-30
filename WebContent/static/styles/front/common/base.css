@@ -1,0 +1,232 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: "宋体", "微软雅黑", Helvetica, "黑体", Arial, Tahoma;
+	font-size: 14px;
+	/*background-color:#B7DF3E;*//*绿*/
+	/*background-color: #e7e8eb;*/
+	background: #f5f5f5;
+}
+
+li {
+	list-style: none;
+}
+
+a,a:hover {
+	text-decoration: none;
+	color: #000;
+	outline: none;
+	blr: expression(this.onFocus = this.blur () );
+}
+th{
+	text-align: center;
+}
+td{
+	text-align:center;
+}
+.h {
+	display: none;
+}
+
+.hi {
+	display: none !important;
+}
+
+.vh {
+	visibility: hidden;
+}
+
+.clear {
+	clear: both;
+}
+
+.mybtn {
+	width: 80px;
+	
+}
+
+.myalert {
+	color: red;
+}
+
+.js_alert {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 300px; /*待用js方式修正居中*/
+	margin: 0 auto;
+	padding: 5px 20px;
+	line-height: 20px;
+	text-align: center;
+	text-align: center;
+	color: #fff;
+	z-index: 10000;
+}
+
+.js_alert_error {
+	background: red;
+}
+
+.js_alert_tips {
+	background: green
+}
+
+.js_alert_float_layer {
+	position: absolute;
+	min-width: 200px;
+	/*
+	min-height: 150px;*/
+	border: 1px solid #E0E0E0;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	background-color: #FFF;
+	display: none;
+}
+
+.js_alert_float_layer .content {
+	text-align: center;
+	padding: 20px 10px 20px;
+}
+
+.js_alert_float_layer .content span {
+	display:block;
+	width:100%;
+	text-align: left;
+	line-height: 30px;
+}
+.js_alert_float_layer .opt {
+	border-top: 1px solid #E0E0E0;
+	height: 50px;
+	line-height: 40px;
+	text-align: center;
+	width: 100%;/*
+	position: absolute;
+	left: 0px;
+	bottom: 0px;*/
+}
+.js_pager{
+	float:right;
+	min-width:240px;
+	padding:5px;
+}
+.js_pager span{
+	margin-left:10px;
+	float:left;
+	min-width:20px;
+	height:25px;
+	line-height:25px;
+	text-align: center;
+}
+.js_pager button{
+	margin-left:10px;
+	float:left;
+	min-width:25px;
+	height:25px;
+	line-height:25px;
+	border:1px solid #AAA;
+	background-color: #F0F0F0;
+	padding:0 5px 0;
+	text-align: center;
+	position: relative;
+}
+.js_pager button.pre,.js_pager button.next{
+	
+}
+.js_pager button i{
+	
+/*	display:inline-block;
+	width:15px;
+	height: 15px;*/
+}
+.js_pager input{
+	margin-left:10px;
+	float:left;
+	display: inline-block;
+	width:60px;
+	height:25px;
+	border:1px solid #AAA;
+}
+.js_arrow_left {
+	position: absolute;
+	top: 50%;
+	margin-top: -6px;
+	border-style: dashed solid dashed dashed;
+	border-width: 6px 6px 6px 0px;
+	border-color: rgba(0, 0, 0, 0) white rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+	height: 0;
+	width: 0;
+	border-right-color: #AAA;
+	left: 50%;
+	margin-left:-3px;
+}
+.js_arrow_right {
+	position: absolute;
+	top: 50%;
+	margin-top: -6px;
+	border-style: dashed dashed dashed solid;
+	border-width: 6px 0px 6px 6px;
+	border-color: rgba(0, 0, 0, 0)  rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) white;
+	height: 0;
+	width: 0;
+	border-left-color: #AAA;
+	left: 50%;
+	margin-left:-2px;
+}
+
+.floatL {
+	float: left;
+}
+
+.vertical_content {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.vertical_wrap {
+	display: table;
+}
+/*空心箭头的效果实际是是将两个实心箭头重叠，左边距相差1px，靠外侧的实体箭头和外部div边框颜色一致，靠内侧的实体箭头和外部div填充背景色一致，外部div设置为相对定位，内部div设置为绝对定位*/
+.myarrow {
+	position: absolute;
+	top: 50%;
+	margin-top: -6px;
+	border-style: dashed solid dashed dashed;
+	border-width: 6px 6px 6px 0px;
+	border-color: rgba(0, 0, 0, 0) white rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+	height: 0;
+	width: 0;
+}
+
+.myarrow_out {
+	border-right-color: #E0E0E0;
+	left: -6px;
+}
+
+.myarrow_in {
+	left: -5px;
+}
+
+.myarrow_top {
+	position: absolute;
+	left: 50%;
+	margin-left: -6px;
+	border-style: dashed dashed solid dashed;
+	border-width: 0px 6px 6px 6px;
+	border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) white rgba(0, 0, 0, 0);
+	height: 0;
+	width: 0;
+}
+
+.myarrow_top_out {
+	border-bottom-color: #E0E0E0;
+	top: -6px;
+}
+
+.myarrow_top_in {
+	top: -5px;
+}

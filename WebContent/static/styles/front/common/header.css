@@ -1,0 +1,77 @@
+#header{
+	background-color: #777872;
+	height:60px;
+	width:100%;
+}
+#logo{
+	height:100%;
+}
+#logo img{
+	margin-top:10px;
+	height:50px;
+}
+
+#nav li{
+	text-align: center;
+	padding-left:5px !important;
+	padding-left:5px !important;
+	line-height: 28px;
+}
+#nav li.active{
+	background: green;/*#B7DF3E;*/
+	
+}
+#nav li:hover{
+	background: #B7DF3E;
+}
+#nav li a{
+	text-align: center;
+	margin:auto;
+}
+#nav li.active a{
+	
+	color:#fff;
+}
+#nav li:hover a{
+	color:#fff;
+}
+#banner{
+	margin:2px auto auto;
+	width:100%;
+	height:160px;
+	clear:both;
+	position: relative;
+}
+#banner .picList{
+	position: absolute;
+	top:0;
+	left:0;
+	width: 100%;
+	height:100%;
+}
+#banner a{
+	width:100%;
+	height:100%;
+}
+#banner img{
+	width:100%;
+	height: 100%;
+	
+}
+#banner .picSel{
+	position: absolute;
+	right:50px;
+	bottom:0px;
+	z-index:20;
+}
+#banner .picSel li{
+	float:left;
+	width:60px;
+	height:5px;
+	background-color:#f0f0f0;
+	margin:0 10px 10px 0;
+	cursor: pointer;
+}
+#banner .picSel li.sel{
+	background-color: #aaa;
+}
