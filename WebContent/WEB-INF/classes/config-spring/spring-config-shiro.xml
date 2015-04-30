@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd 
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd 
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd 
+       http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd"
+	default-autowire="no">
+
+	<description>Shiro配置</description>
+	
+
+	<bean id="springCacheManager" class="org.springframework.cache.ehcache.EhCacheCacheManager">
+		<property name="cacheManager" ref="ehcacheManager" />
+	</bean>
+	<bean id="ehcacheManager"
+		class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean">
+		<property name="configLocation" value="classpath:ehcache/ehcache-config.xml" />
+	</bean>
+	<bean id="cacheManager" class="snnu.wechat.framework.security.SpringCacheManagerWrapper">
+		<property name="cacheManager" ref="springCacheManager" />
+	</bean>
+
+	<bean id="credentialsMatcher"
+		class="snnu.wechat.framework.security.credentials.RetryLimitHashedCredentialsMatcher">
+		<constructor-arg ref="cacheManager" />
+		<property name="hashAlgorithmName" value="sha1" />
+		<property name="hashIterations" value="1" />
+		<property name="storedCredentialsHexEncoded" value="true" />
+	</bean>
+
+	
+	<bean id="userRealm" class="snnu.wechat.system.admin.security.realm.UserRealm">
+		<property name="credentialsMatcher" ref="credentialsMatcher" />
+		<property name="cachingEnabled" value="false" />
+		<property name="authenticationCachingEnabled" value="true" />
+		<property name="authenticationCacheName" value="authenticationCache" />
+		<property name="authorizationCachingEnabled" value="true" />
+		<property name="authorizationCacheName" value="authorizationCache" />
+	</bean>
+
+
+	<bean id="securityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">
+		<property name="realm" ref="userRealm" />
+		
+		<property name="cacheManager" ref="cacheManager" />
+
+	</bean>
+
+
+	<bean
+		class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
+		<property name="staticMethod"
+			value="org.apache.shiro.SecurityUtils.setSecurityManager" />
+		<property name="arguments" ref="securityManager" />
+	</bean>
+
+
+	<bean id="formAuthenticationFilter" class="org.apache.shiro.web.filter.authc.FormAuthenticationFilter">
+		<property name="usernameParam" value="userName" />
+		<property name="passwordParam" value="password" />
+		
+		<property name="loginUrl" value="/system/login.html" />
+	</bean>
+	<bean id="logoutFilter" class="org.apache.shiro.web.filter.authc.LogoutFilter">
+		<property name="redirectUrl" value="/system/login.html"></property>
+	</bean>
+	<bean id="roleFilter"
+		class="org.apache.shiro.web.filter.authz.RolesAuthorizationFilter">
+		<property name="unauthorizedUrl" value="/system/unauthorized.html"></property>
+	</bean>
+	<bean id="userFilter" class="snnu.wechat.system.admin.security.filter.UserFilter" />
+
+
+	<bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
+		<property name="securityManager" ref="securityManager" />
+		<property name="loginUrl" value="/system/login.html" />
+		<property name="successUrl" value="/system/admin/index.html" />
+		<property name="filters">
+			<util:map>
+				<entry key="authc" value-ref="formAuthenticationFilter" />
+				<entry key="logout" value-ref="logoutFilter" />
+				<entry key="role" value-ref="roleFilter" />
+				<entry key="customUser" value-ref="userFilter" />
+			</util:map>
+		</property>
+		<property name="filterChainDefinitions">
+			<value>
+				/system/login.html = authc
+				/system/logout.html =logout
+				/system/admin/** = authc,customUser
+			
+			</value>
+		</property>
+	</bean>
+
+	<bean id="passwordHelper" class="snnu.wechat.system.admin.security.PasswordHelper">
+		<property name="algorithmName" value="sha1"></property>
+		<property name="hashIterations" value="1"></property>
+	</bean>
+	
+	<bean id="lifecycleBeanPostProcessor" class="org.apache.shiro.spring.LifecycleBeanPostProcessor" />
+
+
+</beans>

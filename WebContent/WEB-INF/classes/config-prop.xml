@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<comment>System Configuration</comment>
+
+	<entry key="database.driverName">com.mysql.jdbc.Driver</entry>
+	<entry key="database.url">jdbc:mysql://localhost:3306/snnu_wechat?useUnicode=true&amp;characterEncoding=UTF-8</entry>
+	<entry key="database.user">root</entry>
+	<entry key="database.password">vv</entry>
+	<entry key="database.initialSize">0</entry>
+	<entry key="database.maxActive">10</entry>
+	<entry key="database.maxIdle">10</entry>
+	<entry key="database.minIdle">10</entry>
+	<entry key="database.maxWait">2000</entry>
+
+	<entry key="hibernate.dialect">org.hibernate.dialect.MySQLInnoDBDialect</entry>
+	<entry key="hibernate.show_sql">true</entry>
+	<entry key="hibernate.format_sql">true</entry>
+
+
+
+	<entry key="redis.pool.maxActive">1024</entry>
+	<entry key="redis.pool.maxIdle">200</entry>
+	<entry key="redis.pool.maxWait">1000</entry>
+	<entry key="redis.pool.testOnBorrow">true</entry>
+	<entry key="redis.ip">127.0.0.1</entry>
+	<entry key="redis.port">6379</entry>
+	
+	
+	
+</properties>

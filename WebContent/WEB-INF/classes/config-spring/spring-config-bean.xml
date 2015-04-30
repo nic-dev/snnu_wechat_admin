@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd 
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd 
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd 
+       http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd"
+	default-autowire="byName">
+
+	<description>自定义配置</description>
+	<bean id="serviceConfigBean" class="snnu.wechat.commbiz.common.ServiceConfigBean">
+		<property name="isLocal" value="true"></property>
+		<property name="configMap">
+			<map>
+				<entry key="local" value="true"></entry>
+			</map>
+		</property>
+	</bean>
+	<bean id="uploadConfigBean" class="snnu.wechat.commbiz.common.UploadConfigBean">
+		<property name="sizeMap">
+			<map>
+				<entry key="image" value="1000000"></entry>
+				<entry key="voice" value="2000000"></entry>
+				<entry key="video" value="10000000"></entry>
+			</map>
+		</property>
+		<property name="dirName" value="/attached/"></property>
+		<property name="extMap">
+			<map>
+				<entry key="image" value="jpg" />
+				<entry key="voice" value="mp3,amr" />
+				<entry key="video" value="mp4" />
+				<!-- <entry key="image" value="gif,jpg,jpeg,png,bmp" /> <entry key="voice" 
+					value="mp3,wma,wav,amr" /> <entry key="video" value="avi,mpg,mpeg,mp4,rm,rmvb,wmv" 
+					/> <entry key="file" value="doc,docx,xls,xlsx,ppt,htm,html,txt,zip,rar" /> -->
+			</map>
+		</property>
+	</bean>
+	
+	<bean id="wechatSimulConfigBean" class="snnu.wechat.commbiz.common.WechatSimulConfigBean">
+		<property name="simulMediaContextPath" value="/attached/simul_media/"></property>
+		<property name="webappSimulRestTemplateMap">
+			<map>
+				<entry key="defaulImageUrl">
+					<value></value>
+				</entry>
+				<entry key="userName">
+					<value>weixinusername</value>
+				</entry>
+				<entry key="password">
+					<value>weixinpassword</value>
+				</entry>
+				<entry key="loginUrl">
+					<value>https://mp.weixin.qq.com/cgi-bin/login</value>
+				</entry>
+				<entry key="uploadMediaUrl">
+					<value><![CDATA[https://mp.weixin.qq.com/cgi-bin/filetransfer?action=upload_material&f=json&ticket_id={ticket_id}&ticket={ticket}&token={token}&lang=zh_CN]]></value>
+				</entry>
+				<entry key="uploadMsgUrl">
+					<value><![CDATA[https://mp.weixin.qq.com/cgi-bin/operate_appmsg?t=ajax-response&sub=create&type=109&lang=zh_CN&token=]]></value>
+				</entry>
+				<entry key="fetchMediaUrl">
+					<value><![CDATA[https://mp.weixin.qq.com/cgi-bin/filepage?type={type}&begin=0&count={count}&t=media/list&token={token}&lang=zh_CN]]></value>
+				</entry>
+				<entry key="fetchMsgUrl">
+					<value><![CDATA[https://mp.weixin.qq.com/cgi-bin/appmsg?begin=0&count={count}&t=media/appmsg_list&type=10&action=list&lang=&token={token}]]></value>
+				</entry>
+				<entry key="downloadMediaUrl">
+					<value><![CDATA[https://mp.weixin.qq.com/cgi-bin/downloadfile?token={token}&fileid={fileId}]]></value>
+				</entry>
+
+			</map>
+		</property>
+	</bean>
+	<bean id="sysConfigBean" class="snnu.wechat.commbiz.common.SysConfigBean">
+
+
+	</bean>
+
+	
+</beans>
