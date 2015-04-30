@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="snnu_wechat_admin"
+  id="myeclipse.1430379751525"
+  context-root="/snnu_wechat_admin"
+  j2ee-spec="5.0"
+  archive="snnu_wechat_admin.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebContent" />
+  </attributes>
+</project-module>
+
